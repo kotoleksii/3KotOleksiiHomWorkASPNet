@@ -24,15 +24,6 @@ namespace _3KotOleksiiHomWorkASPNet
         protected global::System.Web.UI.WebControls.Panel componentPanel;
 
         /// <summary>
-        /// frmRegister control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm frmRegister;
-
-        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>
@@ -58,6 +49,15 @@ namespace _3KotOleksiiHomWorkASPNet
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLogin;
+
+        /// <summary>
+        /// ltrlctrl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrlctrl1;
 
         /// <summary>
         /// btnSubmit control.

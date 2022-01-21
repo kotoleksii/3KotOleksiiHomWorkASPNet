@@ -2,7 +2,7 @@
 
 <asp:Panel ID="componentPanel" runat="server">
     <div>
-      <form id="frmRegister" runat="server">  
+      <%--<form id="frmRegister" runat="server">--%>  
             <div>  
                 <table>  
                     <caption>  
@@ -46,6 +46,10 @@
     ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                         </td>  
                     </tr>  
+                     
+                    <asp:Literal id="ltrlctrl1" runat=server />
+                     
+
                     <tr>  
                         <td> </td>  
                         <td> </td>  
@@ -62,6 +66,23 @@
                     </tr>  
                 </table>  
             </div>  
-        </form>
+        <%--</form>--%>
     </div>
 </asp:Panel>
+
+<script>
+    const uploaderPanel = document.querySelector("#SmartUserRegForm_componentPanel");
+    <% if(!string.IsNullOrEmpty(CssClass)) 
+    {
+    %>
+        uploaderPanel.className = '';
+        uploaderPanel.classList.add('<%=CssClass %>');
+    <% } %>
+    <% else
+    {
+    %>
+    <style></style>
+    <%
+    }
+    %>
+</script>

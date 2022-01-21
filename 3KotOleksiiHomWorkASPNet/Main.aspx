@@ -10,9 +10,22 @@
     <title></title>
 </head>
 <body>
+    <style>
+        .cssUploader {
+            background-color: orange;
+            width: 300px;
+        }
+        .cssUploader input[type=submit] {
+            background-color: deepskyblue;
+        }
+    </style>
     <form id="form1" runat="server">
         <div>
-            <mc:SmartUserRegForm runat="server" id="SmartUserRegForm" />
+            <mc:SmartUserRegForm runat="server"
+                id="SmartUserRegForm"
+                AdvancedSetFields="True"
+                CssClass="cssUploader"
+                />
         </div>
     </form>
 </body>
