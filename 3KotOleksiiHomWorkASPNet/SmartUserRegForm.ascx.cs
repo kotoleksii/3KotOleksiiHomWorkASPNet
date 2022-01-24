@@ -1,31 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace _3KotOleksiiHomWorkASPNet
 {
     public partial class SmartUserRegForm : System.Web.UI.UserControl
     {
-        public bool AdvancedSetFields { get; set; } = false;
+        public bool HasAdvancedSetFields { get; set; } = false;
         public string CssClass { get; set; }
+        public string HttpAddress { get; set; }
+        public bool IsValidate { get; set; } = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (AdvancedSetFields)
-                GenerateContorls();
+            if (HasAdvancedSetFields)
+            {
+                ActivateAdvancedSetFields();
+            }
+            else
+            {
+                DeactivateAdvancedSetFields();
+            }
+
+            if (IsValidate)
+            {
+                ActivateValidationFields();
+            }
+            else
+            {
+                DeactivateValidationFields();
+            }
         }
 
-        private void GenerateContorls()
+        private void ActivateAdvancedSetFields()
         {                 
             ltrlctrl1.Text = $"" +
                 $"<tr>" +
                 $"<td>BirthDay:</td>" +
                 $"<td><input type='date' value='{DateTime.Now:yyyy-MM-dd}' id='SmartUserRegForm_txtBirthDay'></input></td>" +
-                $"<td></td>" +
+                $"<td> </td>" +
                 $"</tr>" +
                 $"<tr>" +
                 $"<td>Zip:</td>" +
@@ -39,6 +50,23 @@ namespace _3KotOleksiiHomWorkASPNet
                 $"</tr>";
         }
 
+        private void DeactivateAdvancedSetFields()
+        {
+            ltrlctrl1.Text = "";
+        }
 
+        private void ActivateValidationFields()
+        {
+            validateRequiredUserName.Enabled = true;
+            validateRequiredEmail.Enabled = true;
+            validateRequiredLogin.Enabled = true;
+        }
+
+        private void DeactivateValidationFields()
+        {
+            validateRequiredUserName.Enabled = false;
+            validateRequiredEmail.Enabled = false;
+            validateRequiredLogin.Enabled = false;
+        }
     }
 }

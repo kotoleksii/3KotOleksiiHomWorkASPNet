@@ -24,6 +24,15 @@ namespace _3KotOleksiiHomWorkASPNet
         protected global::System.Web.UI.WebControls.Panel componentPanel;
 
         /// <summary>
+        /// frmRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm frmRegister;
+
+        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace _3KotOleksiiHomWorkASPNet
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
+
+        /// <summary>
+        /// validateRequiredUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateRequiredUserName;
 
         /// <summary>
         /// txtEmail control.
@@ -42,6 +60,15 @@ namespace _3KotOleksiiHomWorkASPNet
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// validateRequiredEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateRequiredEmail;
+
+        /// <summary>
         /// txtLogin control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace _3KotOleksiiHomWorkASPNet
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLogin;
+
+        /// <summary>
+        /// validateRequiredLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validateRequiredLogin;
 
         /// <summary>
         /// ltrlctrl1 control.

@@ -2,7 +2,7 @@
 
 <asp:Panel ID="componentPanel" runat="server">
     <div>
-      <%--<form id="frmRegister" runat="server">--%>  
+      <form id="frmRegister" runat="server">  
             <div>  
                 <table>  
                     <caption>  
@@ -19,9 +19,15 @@
                             <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>  
                         </td>  
                         <td>  
-                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"   
-    ControlToValidate="TextBox1" ErrorMessage="Please Enter Your Username"   
-    ForeColor="Red"></asp:RequiredFieldValidator>  --%>
+                            <asp:RequiredFieldValidator 
+                                ID="validateRequiredUserName"
+                                runat="server"   
+                                ControlToValidate="txtUserName" 
+                                ErrorMessage="Please Enter Your Name"   
+                                ForeColor="Red"
+                                EnableClientScript="False"
+                                >
+                            </asp:RequiredFieldValidator>  
                         </td>  
                     </tr>  
                     <tr>  
@@ -30,9 +36,15 @@
                             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>  
                         </td>  
                         <td>  
-                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"   
-    ControlToValidate="TextBox2" ErrorMessage="Please Enter Your word"   
-    ForeColor="Red"></asp:RequiredFieldValidator>  --%>
+                            <asp:RequiredFieldValidator 
+                                ID="validateRequiredEmail"
+                                runat="server"   
+                                ControlToValidate="txtEmail" 
+                                ErrorMessage="Please Enter Your Email"   
+                                ForeColor="Red"
+                                EnableClientScript="False"
+                                >
+                            </asp:RequiredFieldValidator>  
                         </td>  
                     </tr>  
                     <tr>  
@@ -41,15 +53,20 @@
                             <asp:TextBox ID="txtLogin" runat="server"></asp:TextBox>  
                         </td>  
                         <td>  
-                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"   
-    ControlToValidate="TextBox2" ErrorMessage="Please Enter Your word"   
-    ForeColor="Red"></asp:RequiredFieldValidator>  --%>
+                            <asp:RequiredFieldValidator 
+                                ID="validateRequiredLogin"
+                                runat="server"   
+                                ControlToValidate="txtLogin"
+                                ErrorMessage="Please Enter Your Login" 
+                                ForeColor="Red"
+                                EnableClientScript="False"
+                                >
+                            </asp:RequiredFieldValidator>  
                         </td>  
                     </tr>  
                      
                     <asp:Literal id="ltrlctrl1" runat=server />
                      
-
                     <tr>  
                         <td> </td>  
                         <td> </td>  
@@ -61,22 +78,21 @@
                             <asp:Button ID="btnSubmit" runat="server" Text="Register" style="width: 100%" />  
                         </td>  
                         <td>  
-                           <%-- <asp:Label ID="Label1" runat="server"></asp:Label>  --%>
                         </td>  
                     </tr>  
                 </table>  
             </div>  
-        <%--</form>--%>
+        </form>
     </div>
 </asp:Panel>
 
 <script>
-    const uploaderPanel = document.querySelector("#SmartUserRegForm_componentPanel");
+    const regFormPanel = document.querySelector("#SmartUserRegForm_componentPanel");
     <% if(!string.IsNullOrEmpty(CssClass)) 
     {
     %>
-        uploaderPanel.className = '';
-        uploaderPanel.classList.add('<%=CssClass %>');
+        regFormPanel.className = '';
+        regFormPanel.classList.add('<%=CssClass %>');
     <% } %>
     <% else
     {
@@ -85,4 +101,12 @@
     <%
     }
     %>
+</script>
+
+<script>
+    const frm = document.querySelector('#frmRegister') || null;
+
+    if (frm) {
+        frm.action = '<%=HttpAddress %>';
+    }
 </script>

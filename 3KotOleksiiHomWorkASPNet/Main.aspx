@@ -11,22 +11,19 @@
 </head>
 <body>
     <style>
-        .cssUploader {
+        .cssUserRegForm {
             background-color: orange;
-            width: 300px;
+            width: 430px;
         }
-        .cssUploader input[type=submit] {
+        .cssUserRegForm input[type=submit] {
             background-color: deepskyblue;
         }
     </style>
-    <form id="form1" runat="server">
         <div>
             <mc:SmartUserRegForm runat="server"
                 id="SmartUserRegForm"
-                AdvancedSetFields="True"
-                CssClass="cssUploader"
-                />
+                IsValidate="True"
+                HasAdvancedSetFields="True" />
         </div>
-    </form>
 </body>
 </html>
